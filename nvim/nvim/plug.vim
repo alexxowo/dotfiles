@@ -11,9 +11,6 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'overcache/NeoSolarized'
 	Plug 'haishanh/night-owl.vim'
 	Plug 'hzchirs/vim-material'
-	"FZF
-	"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-	"Plug 'junegunn/fzf.vim'	
 	
 "Telescope
 	Plug 'nvim-lua/popup.nvim'
@@ -27,7 +24,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	
 	Plug 'nvim-treesitter/nvim-treesitter'
-	" Plug 'nvim-treesitter/playground'
+	Plug 'nvim-treesitter/playground'
 
 	" Productive plugins
 	Plug 'Yggdroot/indentLine'
@@ -46,4 +43,6 @@ call plug#begin('~/.config/nvim/plugged')
 	" Snippets for react
 	Plug 'SirVer/ultisnips'
 	Plug 'mlaursen/vim-react-snippets'	
+
+  Plug 'ryanoasis/vim-devicons'
 call plug#end()

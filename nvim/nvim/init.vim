@@ -12,6 +12,7 @@ set matchpairs+=<:>
 set number
 set rnu
 set wrap
+set encoding=UTF-8
 
 " Editor config
 set nobackup
@@ -75,11 +76,4 @@ autocmd VimLeave * call system('printf "\e[5 q" > $TTY')
 
 " Conquer of Completion (CoC)
 let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-phpls', 'coc-pyright']
-
-
-
 lua require('lspconfig').tsserver.setup{}
-
-lua require('telescope').setup{ defaults = { file_ignore_patterns = {"node_modules"} } }
-
-
