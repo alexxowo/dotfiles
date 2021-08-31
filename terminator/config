@@ -17,48 +17,20 @@
     background_type = transparent
     cursor_shape = ibeam
     cursor_color = "#aaaaaa"
-    font = JetBrainsMono NF Medium 10
+    font = JetBrainsMono NF Medium 11
+    disable_mousewheel_zoom = True
     palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
-    use_system_font = False
-    use_theme_colors = True
-  [[WildCherry]]
-    background_color = "#1f1726"
-    background_darkness = 0.91
-    background_type = transparent
-    cursor_shape = ibeam
-    cursor_color = "#dd00ff"
-    font = CaskaydiaCove Nerd Font 11
-    foreground_color = "#dafaff"
-    palette = "#000507:#d94085:#2ab250:#ffd16f:#883cdc:#ececec:#c1b8b7:#fff8de:#009cc9:#da6bac:#f4dca5:#eac066:#308cba:#ae636b:#ff919d:#e4838d"
-    use_system_font = False
-  [[Halcyon]]
-    background_darkness = 0.86
-    background_type = transparent
-    cursor_shape = ibeam
-    cursor_color = "#5ccfe6"
-    font = JetBrainsMono NF Medium 10
-    palette = "#1d2433:#ef6b73:#bae67e:#ffd580:#6679a4:#c3a6ff:#5ccfe6:#d7dce2:#1d2433:#ef6b73:#bae67e:#ffd580:#6679a4:#c3a6ff:#5ccfe6:#d7dce2"
     use_system_font = False
     use_theme_colors = True
   [[After Dark]]
     background_color = "#10111b"
-    background_darkness = 0.9
+    background_darkness = 0.94
     background_type = transparent
     cursor_shape = ibeam
     cursor_color = "#aaaaaa"
-    font = JetBrainsMono NF Medium 10
+    font = JetBrainsMono NF Medium 11
+    disable_mousewheel_zoom = True
     palette = "#2e3436:#ef4a9e:#00d2bc:#e7ca7a:#9399fa:#ca5bcc:#86d079:#d3d7cf:#555753:#ef4a9e:#00d2bc:#e7ca7a:#9399fa:#ca5bcc:#86d079:#eeeeec"
-    use_system_font = False
-    use_theme_colors = True
-  [[Horizon]]
-    background_color = "#1c1e26"
-    background_darkness = 0.9
-    background_type = transparent
-    cursor_shape = ibeam
-    cursor_color = "#e95379"
-    font = agave Nerd Font Mono 12
-    foreground_color = "#bbbbbb"
-    palette = "#e9436f:#f9cbbe:#ffaf87:#27d796:#6c6f93:#fdf0ed:#fadad1:#b877db:#e95379:#fadad1:#fac29a:#09f7a0:#6c6f8a:#ffffff:#eddad1:#b88adb"
     use_system_font = False
     use_theme_colors = True
 [layouts]

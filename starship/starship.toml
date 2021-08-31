@@ -1,0 +1,49 @@
+[username]
+style_user = "blue bold"
+style_root = "black bold"
+format = '[$user]($style)'
+disabled = false
+show_always = true
+
+[character]
+success_symbol='[](green)'
+error_symbol='[](red)'
+
+[hostname]
+ssh_only = false
+format ="[@$hostname](blue bold) "
+disabled = false
+
+[git_branch]
+symbol = "שׂ "
+truncation_length = 4
+truncation_symbol = ""
+format='[\($branch\)]($style) '
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = "ﰖ "
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[ PICKING](bold red)"
+
+[nodejs]
+format = '[\( $version\)](bold green) '
+
+[package]
+format = '[\(  $version\)](208 bold) '
+
+[php]
+format = '[\( $version\)](147 bold) '
+
+[python]
+symbol = " "
+pyenv_version_name = true
+
+[status]
+style = "red"
+symbol = ""
+format = '[\[$symbol\]]($style) '
+map_symbol = true
+disabled = false
