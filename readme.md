@@ -6,8 +6,8 @@ I use the following programs with development with javascript and python
 
 | Program     | Link (soon)         |
 | ----------- | ------------------- |
-| Neovim 0.5  | Neovim Config       |
-| Terminator  | Terminator Config   |
+| Neovim 0.5  | [Neovim Config](https://github.com/alexxowo/dotfiles/tree/main/nvim/nvim)       |
+| Terminator  | [Terminator Config](https://github.com/alexxowo/dotfiles/tree/main/terminator)   |
 | Firefox     |           -         |
 | Starship    |           -         |
 | Zsh         |           -         |
