@@ -4,6 +4,8 @@ let mapleader = ','
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
+nnoremap daw dawi
+
 " Save, close, save and close mapping
 nnoremap <leader>ss :w!<CR> 
 nnoremap <leader>qq :q!<CR>
@@ -13,8 +15,8 @@ nnoremap <leader>sq :wq!<CR>
 noremap <leader>tc :tabclose<CR>
 
 " move between buffers
-noremap <C-Right> :bnext!<CR>
-noremap <C-Left> :bprev!<CR>
+nnoremap <Tab> :bnext!<CR>
+nnoremap <S-Tab> :bprev!<CR>
 
 " Close Actual buff and save if not saved
 command! CloseBuff :call s:closeBuffer()
@@ -28,15 +30,31 @@ nnoremap ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap fh <cmd>lua require('telescope.builtin').help_tags()<cr>
-
+" Coc Find Definition, type, implementation and references
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-nmap <leader>k :wincmd h<CR>
-nmap <leader>l :wincmd j<CR>
+" Window Splitting
+nmap ss :split<RETURN><C-w>w
+nmap sv :vsplit<RETURN><C-w>w
 
+" Movin between windows
+nmap <Space> <C-w>w
+map s<left> <C-w>h
+map s<up> <C-w>k
+map s<down> <C-w>j
+map s<right> <C-w>l
+map sh <C-w>h
+map sk <C-w>k
+map sj <C-w>j
+map sl <C-w>l
+" Resize window
+nmap <C-w><left> <C-w><
+nmap <C-w><right> <C-w>>
+nmap <C-w><up> <C-w>+
+nmap <C-w><down> <C-w>-
 " Open NERDTree with CTRL N
 map <C-n> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle

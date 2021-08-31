@@ -4,7 +4,7 @@ syntax on
 filetype plugin indent on
 set ttyfast
 set cmdheight=2
-set showmode
+set showmode!
 set showcmd
 set matchpairs+=<:>
 
@@ -25,9 +25,9 @@ set tabstop=2
 set smarttab
 set shiftwidth=2
 set expandtab
+
+set cursorline
 " ----------------------------------
-
-
 " Imports
 " ---------------------------------
 " Plugins
@@ -39,25 +39,17 @@ runtime ./keymap.vim
 " Editor colors
 set t_Co=256
 set termguicolors
-colorscheme vim-material
-let g:material_style='oceanic'
+colorscheme horizon
+
+" let g:material_style='oceanic'
 hi Normal guibg=NONE ctermbg=NONE guifg=NONE
+hi NonText ctermbg=NONE guibg=NONE
+hi LineNr cterm=NONE ctermfg=240 guifg=#2b506e guibg=NONE
+hi Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=#2D2D2D
 " ---------------------------------
 
 " Plugins configuration
 " ---------------------------------
-
-" Vim Airline 
-let g:airline_theme = 'onedark'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-
-let g:airline_left_sep = "\uE0B0"
-let g:airline_right_sep = "\uE0BE"
-
 " indent line
 let g:indentLine_fileTypeExclude = ['text', 'sh', 'help', 'terminal']
 let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
@@ -76,4 +68,31 @@ autocmd VimLeave * call system('printf "\e[5 q" > $TTY')
 
 " Conquer of Completion (CoC)
 let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-phpls', 'coc-pyright']
-lua require('lspconfig').tsserver.setup{}
+
+" Highlights
+augroup BgHighlight
+  autocmd!
+  autocmd WinEnter * set cul
+  autocmd WinLeave * set nocul
+augroup END
+
+if &term =~ "screen"
+  autocmd BufEnter * if bufname("") !~ "^?[A-Za-z0-9?]*://" | silent! exe '!echo -n "\ek[`hostname`:`basename $PWD`/`basename %`]\e\\"' | endif
+  autocmd VimLeave * silent!  exe '!echo -n "\ek[`hostname`:`basename $PWD`]\e\\"'
+endif
+
+
+lua require('_lualine')
+lua require('_telescope')
+lua require('bufferline').setup{}
+
+lua << EOF
+require("bufferline").setup{
+    indicator_icon = '',
+    buffer_close_icon = '',
+    modified_icon = '●',
+    close_icon = '',
+    left_trunc_marker = '',
+    right_trunc_marker = '',
+}
+EOF
